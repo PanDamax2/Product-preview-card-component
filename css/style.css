@@ -15,32 +15,71 @@ body {
   align-items: center;
   min-height: 100vh;
   padding: 2em 1em;
-  background-color: hsl(212, 45%, 89%);
-  font-family: "Outfit", sans-serif;
-  font-size: 1.6rem;
+  background-color: hsl(30, 38%, 92%);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
 }
 
 .card {
-  padding: 1em 1em 2em;
   background-color: hsl(0, 0%, 100%);
-  border-radius: 18px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
 }
 .card__img {
   width: 100%;
-  border-radius: 12px;
+}
+.card__body {
+  padding: 1.2em 1.8em;
+}
+.card__category {
+  color: hsl(228, 12%, 48%);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
 .card__title {
-  margin: 0.8em 0;
-  color: hsl(218, 44%, 22%);
-  font-size: 1.7rem;
-  text-align: center;
+  margin: 0.4em 0;
+  color: hsl(212, 21%, 14%);
+  font-family: "Fraunces", serif;
+  font-size: 2.4rem;
 }
-.card__p {
-  margin: 0 1em;
-  color: hsl(220, 15%, 55%);
-  font-size: 1.2rem;
-  text-align: center;
+.card__description {
+  color: hsl(228, 12%, 48%);
+}
+.card__prices {
+  display: flex;
+  align-items: center;
+  margin: 1.6em 0 1.4em;
+}
+.card__prices-first {
+  color: hsl(158, 36%, 37%);
+  font-family: "Fraunces", serif;
+  font-size: 2.6rem;
+}
+.card__prices-second {
+  color: hsl(228, 12%, 48%);
+  margin-left: 1em;
+}
+.card__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1em;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.card__btn:hover {
+  background-color: hsl(212, 21%, 14%);
+}
+.card__btn-icon {
+  margin-right: 0.6em;
 }
 
 .attribution {
@@ -51,21 +90,4 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-@media (min-width: 320px) {
-  .card {
-    padding: 1.2em 1.2em 2.2em;
-  }
-  .card__title {
-    font-size: 2rem;
-  }
-  .card__p {
-    font-size: 1.5rem;
-  }
-}
-@media (min-width: 375px) {
-  .card {
-    width: 375px;
-  }
 }/*# sourceMappingURL=style.css.map */

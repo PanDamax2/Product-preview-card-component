@@ -4,14 +4,15 @@
 	box-sizing: border-box;
 }
 
-$white: hsl(0, 0%, 100%);
-$light-gray: hsl(212, 45%, 89%);
-$grayish-blue: hsl(220, 15%, 55%);
-$dark-blue: hsl(218, 44%, 22%);
-
 html {
 	font-size: 62.5%;
 }
+
+$dark-cyan: hsl(158, 36%, 37%);
+$cream: hsl(30, 38%, 92%);
+$very-dark-blue: hsl(212, 21%, 14%);
+$dark-grayish-blue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
 
 body {
 	display: flex;
@@ -20,34 +21,81 @@ body {
 	align-items: center;
 	min-height: 100vh;
 	padding: 2em 1em;
-	background-color: $light-gray;
-	font-family: 'Outfit', sans-serif;
-	font-size: 1.6rem;
+	background-color: $cream;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.4rem;
 }
 
 .card {
-	padding: 1em 1em 2em;
 	background-color: $white;
-	border-radius: 18px;
-	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+	border-radius: 8px;
+	overflow: hidden;
 
 	&__img {
 		width: 100%;
-		border-radius: 12px;
+	}
+
+	&__body {
+		padding: 1.2em 1.8em;
+	}
+
+	&__category {
+		color: $dark-grayish-blue;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		letter-spacing: 4px;
 	}
 
 	&__title {
-		margin: 0.8em 0;
-		color: $dark-blue;
-		font-size: 1.7rem;
-		text-align: center;
+		margin: 0.4em 0;
+		color: $very-dark-blue;
+		font-family: 'Fraunces', serif;
+		font-size: 2.4rem;
 	}
 
-	&__p {
-		margin: 0 1em;
-		color: $grayish-blue;
-		font-size: 1.2rem;
-		text-align: center;
+	&__description {
+		color: $dark-grayish-blue;
+	}
+
+	&__prices {
+		display: flex;
+		align-items: center;
+		margin: 1.6em 0 1.4em;
+
+		&-first {
+			color: $dark-cyan;
+			font-family: 'Fraunces', serif;
+			font-size: 2.6rem;
+		}
+
+		&-second {
+			color: $dark-grayish-blue;
+			margin-left: 1em;
+		}
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding: 1em;
+		color: $white;
+		background-color: $dark-cyan;
+		border: none;
+		border-radius: 8px;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: bold;
+		transition: background-color 0.3s;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $very-dark-blue;
+		}
+
+		&-icon {
+			margin-right: 0.6em;
+		}
 	}
 }
 
@@ -58,23 +106,4 @@ body {
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
-}
-
-@media (min-width: 320px) {
-	.card {
-		padding: 1.2em 1.2em 2.2em;
-
-		&__title {
-			font-size: 2rem;
-		}
-		&__p {
-			font-size: 1.5rem;
-		}
-	}
-}
-
-@media (min-width: 375px) {
-	.card {
-		width: 375px;
-	}
 }
