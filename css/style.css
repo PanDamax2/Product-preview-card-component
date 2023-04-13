@@ -13,8 +13,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   padding: 2em 1em;
+  min-height: 100vh;
   background-color: hsl(30, 38%, 92%);
   font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
@@ -23,49 +23,57 @@ body {
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 8px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
   overflow: hidden;
 }
-.card__img {
-  width: 100%;
+.card__header {
+  min-height: 240px;
+  background-image: url("../images/image-product-mobile.jpg");
+  background-position: center;
+  background-size: cover;
+  filter: brightness(90%);
 }
 .card__body {
-  padding: 1.2em 1.8em;
+  padding: 1.6em 2em;
 }
 .card__category {
   color: hsl(228, 12%, 48%);
   font-size: 1.2rem;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
 }
 .card__title {
-  margin: 0.4em 0;
+  margin: 0.4em 0 0.6em;
   color: hsl(212, 21%, 14%);
   font-family: "Fraunces", serif;
-  font-size: 2.4rem;
+  font-size: 3.1rem;
+  line-height: 1em;
 }
 .card__description {
   color: hsl(228, 12%, 48%);
+  line-height: 1.6em;
 }
 .card__prices {
   display: flex;
   align-items: center;
-  margin: 1.6em 0 1.4em;
+  margin: 1.4em 0 1.4em;
 }
 .card__prices-first {
   color: hsl(158, 36%, 37%);
   font-family: "Fraunces", serif;
-  font-size: 2.6rem;
+  font-size: 3.2rem;
 }
 .card__prices-second {
+  margin-left: 1.4em;
   color: hsl(228, 12%, 48%);
-  margin-left: 1em;
+  font-size: 1.3rem;
 }
 .card__btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1.2em 0;
   width: 100%;
-  padding: 1em;
   color: hsl(0, 0%, 100%);
   background-color: hsl(158, 36%, 37%);
   border: none;
@@ -79,7 +87,7 @@ body {
   background-color: hsl(212, 21%, 14%);
 }
 .card__btn-icon {
-  margin-right: 0.6em;
+  margin-right: 0.8em;
 }
 
 .attribution {
@@ -90,4 +98,28 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 400px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 600px;
+    min-height: 450px;
+  }
+  .card__header {
+    background-image: url("../images/image-product-desktop.jpg");
+  }
+  .card__body {
+    padding: 2em 2.3em;
+  }
+  .card__title {
+    margin: 0.7em 0 0.8em;
+  }
+  .card__description {
+    line-height: 1.8em;
+  }
+  .card__prices {
+    margin-bottom: 1.8em;
+  }
 }/*# sourceMappingURL=style.css.map */

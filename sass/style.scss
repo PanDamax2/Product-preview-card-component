@@ -19,8 +19,8 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
 	padding: 2em 1em;
+	min-height: 100vh;
 	background-color: $cream;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.4rem;
@@ -29,48 +29,56 @@ body {
 .card {
 	background-color: $white;
 	border-radius: 8px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
 	overflow: hidden;
 
-	&__img {
-		width: 100%;
+	&__header {
+		min-height: 240px;
+		background-image: url('../images/image-product-mobile.jpg');
+		background-position: center;
+		background-size: cover;
+		filter: brightness(90%);
 	}
 
 	&__body {
-		padding: 1.2em 1.8em;
+		padding: 1.6em 2em;
 	}
 
 	&__category {
 		color: $dark-grayish-blue;
 		font-size: 1.2rem;
 		text-transform: uppercase;
-		letter-spacing: 4px;
+		letter-spacing: 5px;
 	}
 
 	&__title {
-		margin: 0.4em 0;
+		margin: 0.4em 0 0.6em;
 		color: $very-dark-blue;
 		font-family: 'Fraunces', serif;
-		font-size: 2.4rem;
+		font-size: 3.1rem;
+		line-height: 1em;
 	}
 
 	&__description {
 		color: $dark-grayish-blue;
+		line-height: 1.6em;
 	}
 
 	&__prices {
 		display: flex;
 		align-items: center;
-		margin: 1.6em 0 1.4em;
+		margin: 1.4em 0 1.4em;
 
 		&-first {
 			color: $dark-cyan;
 			font-family: 'Fraunces', serif;
-			font-size: 2.6rem;
+			font-size: 3.2rem;
 		}
 
 		&-second {
+			margin-left: 1.4em;
 			color: $dark-grayish-blue;
-			margin-left: 1em;
+			font-size: 1.3rem;
 		}
 	}
 
@@ -78,8 +86,8 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		padding: 1.2em 0;
 		width: 100%;
-		padding: 1em;
 		color: $white;
 		background-color: $dark-cyan;
 		border: none;
@@ -94,7 +102,7 @@ body {
 		}
 
 		&-icon {
-			margin-right: 0.6em;
+			margin-right: 0.8em;
 		}
 	}
 }
@@ -106,4 +114,33 @@ body {
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 400px) {
+	.card {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		max-width: 600px;
+		min-height: 450px;
+
+		&__header {
+			background-image: url('../images/image-product-desktop.jpg');
+		}
+
+		&__body {
+			padding: 2em 2.3em;
+		}
+
+		&__title {
+			margin: 0.7em 0 0.8em;
+		}
+
+		&__description {
+			line-height: 1.8em;
+		}
+
+		&__prices {
+			margin-bottom: 1.8em; ///margin: 1.4em 0 1.4em; zmienic ostatnie na 1.8
+		}
+	}
 }
